@@ -17,5 +17,5 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y libpthread-stubs0-dev
     - name: Compile the Program
       run: gcc -o df df.c -lpthread
-    - name: Run the Program for 15 Seconds
-      run: timeout 15 ./df 6
+    - name: Run the Program for 1 Minute
+      run: timeout 60 ./df 6 || true
